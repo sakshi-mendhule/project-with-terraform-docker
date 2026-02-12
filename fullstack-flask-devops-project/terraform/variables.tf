@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  description = "Your existing AWS Key Pair name"
+  description = "New-key"
 }
 
 variable "project_name" {
