@@ -9,10 +9,10 @@ data "aws_ami" "amazon_linux" {
 }
 
 resource "aws_instance" "hotstar_server" {
-  ami                    = data.aws_ami.amazon_linux.id
-  instance_type          = var.instance_type
-  key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.hotstar_sg.id]
+  ami                    = ami-0317b0f0a0144b137
+  instance_type          = t3.micro
+  key_name               = New-key
+  vpc_security_group_ids = vpc-060d9dd67927b11f1
 
   user_data = <<-EOF
               #!/bin/bash
